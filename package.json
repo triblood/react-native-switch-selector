@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/App2Sales/react-native-switch-selector"
+        "url": "git+https://github.com/jkdrangel/react-native-switch-selector"
     },
     "keywords": [
         "react-native"
@@ -20,9 +20,9 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/App2Sales/react-native-switch-selector/issues"
+        "url": "https://github.com/jkdrangel/react-native-switch-selector/issues"
     },
-    "homepage": "https://app2sales.github.io/react-native-switch-selector/",
+    "homepage": "https://jkdrangel.github.io/react-native-switch-selector/",
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.3.3",
         "@typescript-eslint/parser": "^2.3.3",
