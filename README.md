@@ -16,19 +16,19 @@ Switch Selector to React Native.
 ### Installing
 
 ```Shell
-yarn add react-native-switch-selector
+yarn add @jkdrangel/react-native-switch-selector
 ```
 
 or
 
 ```Shell
-npm i react-native-switch-selector --save
+npm i @jkdrangel/react-native-switch-selector --save
 ```
 
 ### Usage
 
 ```js
-import SwitchSelector from "react-native-switch-selector";
+import SwitchSelector from "@jkdrangel/react-native-switch-selector";
 ```
 
 ```js
@@ -106,7 +106,7 @@ const options = [
 
 - Lucas Santana Carneiro - [jkdrangel](https://github.com/jkdrangel)
 - Cássio Silva de Sá Santos - [ssscassio](https://github.com/ssscassio)
-- [Contributors](https://github.com/App2Sales/react-native-switch-selector/graphs/contributors)
+- [Contributors](https://github.com/jkdrangel/react-native-switch-selector/graphs/contributors)
 
 ### Contribute
 
