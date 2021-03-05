@@ -48,7 +48,9 @@ declare module "react-native-switch-selector" {
     testID?: string;
   }
 
-  class SwitchSelector extends Component<ISwitchSelectorProps> {}
+  class SwitchSelector extends Component<ISwitchSelectorProps> {
+    toggleItem(index: number, callOnPress?: boolean): void;
+  }
 
   export default SwitchSelector;
 }
