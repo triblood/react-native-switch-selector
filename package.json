@@ -1,5 +1,4 @@
 {
-
     "name": "react-native-switch-selector",
     "version": "2.1.4",
     "description": "Switch Selector to React Native.",
@@ -36,6 +35,9 @@
         "typescript": "^3.6.4"
     },
     "dependencies": {
-        "prop-types": "^15.7.2"
+        "@gorhom/bottom-sheet": "^2",
+        "prop-types": "^15.7.2",
+        "react-native-gesture-handler": "^1.10.3",
+        "react-native-reanimated": "^1"
     }
 }
