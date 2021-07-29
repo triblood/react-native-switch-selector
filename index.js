@@ -150,48 +150,49 @@ export default class SwitchSelector extends Component {
       const isSelected = selected === index;
 
       return (
-        <TouchableOpacity
+        <View
           key={index}
           disabled={disabled}
           style={[
             styles.button,
             isSelected ? selectedTextContainerStyle : textContainerStyle,
           ]}
-          onPress={() => this.toggleItem(index)}
           accessibilityLabel={element.accessibilityLabel}
           testID={element.testID}
         >
-          {typeof element.customIcon === "function"
-            ? element.customIcon(isSelected)
-            : element.customIcon}
-          {element.imageIcon && (
-            <Image
-              source={element.imageIcon}
+          <TouchableOpacity onPress={() => this.toggleItem(index)}>
+            {typeof element.customIcon === "function"
+              ? element.customIcon(isSelected)
+              : element.customIcon}
+            {element.imageIcon && (
+              <Image
+                source={element.imageIcon}
+                style={[
+                  {
+                    height: 30,
+                    width: 30,
+                    tintColor: isSelected ? selectedColor : textColor,
+                  },
+                  imageStyle,
+                ]}
+              />
+            )}
+            <Text
               style={[
                 {
-                  height: 30,
-                  width: 30,
-                  tintColor: isSelected ? selectedColor : textColor,
+                  fontSize,
+                  fontWeight: bold ? "bold" : "normal",
+                  textAlign: "center",
+                  color: isSelected ? selectedColor : textColor,
+                  backgroundColor: "transparent",
                 },
-                imageStyle,
+                isSelected ? selectedTextStyle : textStyle,
               ]}
-            />
-          )}
-          <Text
-            style={[
-              {
-                fontSize,
-                fontWeight: bold ? "bold" : "normal",
-                textAlign: "center",
-                color: isSelected ? selectedColor : textColor,
-                backgroundColor: "transparent",
-              },
-              isSelected ? selectedTextStyle : textStyle,
-            ]}
-          >
-            {element.label}
-          </Text>
-        </TouchableOpacity>
+            >
+              {element.label}
+            </Text>
+          </TouchableOpacity>
+        </View>
       );
     });
 
