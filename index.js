@@ -14,8 +14,7 @@ import { TouchableOpacity } from "@gorhom/bottom-sheet";
 
 const styles = {
   button: {
-    flex: 1,
-    flexDirection: "row",
+    width: "50%",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -150,17 +149,20 @@ export default class SwitchSelector extends Component {
       const isSelected = selected === index;
 
       return (
-        <View
+        <TouchableOpacity
+          style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
           key={index}
-          disabled={disabled}
-          style={[
-            styles.button,
-            isSelected ? selectedTextContainerStyle : textContainerStyle,
-          ]}
-          accessibilityLabel={element.accessibilityLabel}
-          testID={element.testID}
+          onPress={() => this.toggleItem(index)}
         >
-          <TouchableOpacity onPress={() => this.toggleItem(index)}>
+          <View
+            disabled={disabled}
+            style={[
+              styles.button,
+              isSelected ? selectedTextContainerStyle : textContainerStyle,
+            ]}
+            accessibilityLabel={element.accessibilityLabel}
+            testID={element.testID}
+          >
             {typeof element.customIcon === "function"
               ? element.customIcon(isSelected)
               : element.customIcon}
@@ -191,8 +193,8 @@ export default class SwitchSelector extends Component {
             >
               {element.label}
             </Text>
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
       );
     });
 
